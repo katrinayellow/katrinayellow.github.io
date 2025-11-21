@@ -3,352 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Katherine Eyal | Economist & Data Scientist</title>
-    <meta name="description" content="Academic researcher and data consultant specializing in micro-econometrics, public health, and AI-driven research synthesis.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dr Katherine Eyal</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
     <style>
-        :root {
-            --primary: #003b6f; /* UCT-ish Blue */
-            --secondary: #f4f4f9;
-            --text: #333;
-            --light-text: #666;
-            --accent: #d9534f;
+        header {
+            text-align: center;
+            padding: 2rem 0;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text);
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            margin-left: 2rem;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 4rem 5%;
-            background-color: var(--secondary);
-        }
-
-        .hero-text {
-            flex: 1;
-            padding-right: 2rem;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .hero-text h2 {
-            font-size: 1.2rem;
-            color: var(--light-text);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .hero-text p {
+        .contact-info {
+            text-align: center;
             margin-bottom: 2rem;
-            max-width: 600px;
         }
-
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+        .contact-info a {
+            margin: 0 0.5rem;
         }
-
-        .btn:hover {
-            background: #002a50;
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            margin-left: 10px;
-        }
-
-        .hero-image {
-            flex: 0 0 300px;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Sections */
         section {
-            padding: 4rem 5%;
+            margin: 2rem 0;
         }
-
-        h3.section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 3rem;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        /* Skills Tags */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .skill-tag {
-            background: #e0e7ff;
-            color: var(--primary);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Selected Work */
-        .work-item {
-            background: white;
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .work-item h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .work-meta {
-            font-size: 0.9rem;
-            color: var(--light-text);
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            
-            .hero-text {
-                padding-right: 0;
-                margin-top: 2rem;
-            }
-
-            .nav-links {
-                display: none; /* Simple hide for mobile for this snippet */
-            }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Dr Katherine Eyal</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#research">Research</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Data Science & Economic Research Consultant</h1>
-            <h2>Associate Professor (UCT) | SALDRU Researcher</h2>
-            <p>
-                Bridging the gap between academic rigor and actionable insights. 
-                I help organizations design surveys, analyze complex datasets, and implement AI-driven research workflows.
-            </p>
-            <a href="#contact" class="btn">Work With Me</a>
-            <!-- Ideally link this to a PDF stored in your repo -->
-            <a href="#" class="btn btn-outline">Download CV</a>
-        </div>
-        <div class="hero-image">
-            <!-- REPLACE THIS SRC WITH YOUR ACTUAL IMAGE FILE NAME -->
-            <img src="https://via.placeholder.com/300x300?text=KE" alt="Katherine Eyal">
-        </div>
+    <header>
+        <h1>Dr Katherine Eyal</h1>
+        <p><strong>Associate Professor, School of Economics</strong><br>
+        University of Cape Town</p>
     </header>
 
-    <!-- Services / Expertise -->
-    <section id="expertise">
-        <h3 class="section-title">Technical Expertise</h3>
-        <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h4>Micro-Econometrics</h4>
-                <p>Causal inference, quasi-experimental techniques, and program evaluation (RCTs).</p>
-            </div>
-            <!-- Service 2 -->
-            <div class="service-card">
-                <i class="fas fa-clipboard-list"></i>
-                <h4>Survey Design</h4>
-                <p>Large-scale instrument development (e.g., CVACS, HAALSI) and longitudinal study management.</p>
-            </div>
-            <!-- Service 3 -->
-            <div class="service-card">
-                <i class="fas fa-robot"></i>
-                <h4>AI in Research</h4>
-                <p>Leveraging LLMs (Claude, ChatGPT) for research synthesis, data cleaning, and workflow automation.</p>
-            </div>
-             <!-- Service 4 -->
-             <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h4>Statistical Programming</h4>
-                <p>Advanced Stata, Python, R integration, and reproducible research methods.</p>
-            </div>
+    <main>
+        <div class="contact-info">
+            <a href="mailto:katherine.eyal@uct.ac.za">katherine.eyal@uct.ac.za</a> | 
+            +27-21-650-5238
         </div>
 
-        <div class="skills-container">
-            <span class="skill-tag">Stata</span>
-            <span class="skill-tag">Python & R</span>
-            <span class="skill-tag">Survey Design</span>
-            <span class="skill-tag">Public Health</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Development Economics</span>
-            <span class="skill-tag">AI Tools</span>
-        </div>
-    </section>
+        <section>
+            <h2>About</h2>
+            <p>I am a micro-economist with research interests in public health (including vaccine hesitancy, mental health, TB, and paediatric oncology), micro-econometrics (including program evaluation using both quasi-experimental survey techniques and behavioural economics RCTs, survey design, and data collection), and development economics (including the economics of education, labour economics and social grants). I have a strong interest in AI tools in research synthesis and data analysis.</p>
+        </section>
 
-    <!-- Selected Work / Research -->
-    <section id="research" style="background-color: #f9f9f9;">
-        <h3 class="section-title">Selected Projects & Impact</h3>
-        
-        <div class="work-item">
-            <h4>HAALSI: Health and Aging in Africa</h4>
-            <div class="work-meta">Scientific Advisor (2023-2028) | Indepth Community</div>
-            <p>Contributing to the design and analysis of a nationally representative longitudinal study. Focusing on cognitive health, socio-economic status, and mental well-being in adults aged 40+.</p>
-        </div>
+        <section>
+            <h2>Current Positions</h2>
+            <p><strong>Associate Professor</strong>, School of Economics, University of Cape Town (2023-present)</p>
+            <p><strong>Associate</strong>, Southern African Labour and Development Research Unit (SALDRU)</p>
+            <p><strong>Scientific Advisor</strong>, HAALSI (Health and Aging in Africa: A Longitudinal Study of an INDEPTH Community in South Africa) (2023-2028)</p>
+        </section>
 
-        <div class="work-item">
-            <h4>COVID-19 Vaccine Survey (CVACS)</h4>
-            <div class="work-meta">Co-Principal Investigator | Gates Foundation Funded</div>
-            <p>Led a large-scale ($500k budget) survey project providing rapid-response data to policymakers. Managed external consultants and junior researchers to evaluate behavioral economics-based messaging.</p>
-        </div>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D Economics, University of Cape Town, 2013-2016</li>
+                <li>M.A. Economics, University of Cape Town, 2005 (with distinction)</li>
+                <li>B.Com Honours Economics, University of Cape Town, 2002 (with distinction)</li>
+                <li>B.Sc Computer Science and Economics, University of Cape Town, 2001 (with distinction)</li>
+            </ul>
+        </section>
 
-        <div class="work-item">
-            <h4>Mental Health & Economic Intersections</h4>
-            <div class="work-meta">Published Research & Policy Work</div>
-            <p>Extensive publication record on the economics of mental health, TB, and cash transfers. Successfully advocated for student mental health policies at UCT.</p>
-        </div>
-    </section>
+        <section>
+            <h2>Selected Recent Publications</h2>
+            <ul>
+                <li>Eyal, K. and Njozela, L. (2023). Navigating Crisis: Household Recomposition and Welfare Patterns during COVID-19 in South Africa. <em>Development Southern Africa</em>.</li>
+                <li>Chakraborty, R., et al. including Eyal, K. (2025). Expanded child support grant eligibility and later-life mortality among mothers in rural South Africa. <em>Global Public Health</em>, 20(1).</li>
+                <li>Buttenheim AM, Köhler T, Eyal K, Maughan-Brown B. (2024). The Effects of Behaviorally Informed Messages on COVID-19 Vaccination Intentions and Behavior. <em>Journal of Health Communication</em>, 29(10):603-22.</li>
+                <li>Eyal K, et al. (2023). Correlates of COVID-19 vaccination intentions and opinions about mandates among four groups of adults in South Africa. <em>BMC Public Health</em>, 23(1):1767.</li>
+                <li>Eyal, K. and Burns, J. (2019). The Parent Trap: Cash Transfers and the Intergenerational Transmission of Depressive Symptoms in South Africa. <em>World Development</em>, 117, 211-229.</li>
+            </ul>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" style="text-align: center;">
-        <h3 class="section-title">Get In Touch</h3>
-        <p style="margin-bottom: 2rem; font-size: 1.1rem;">
-            Available for research consultation, data analysis projects, and grant-writing support.
-        </p>
-        <a href="mailto:katherine.eyal@uct.ac.za" class="btn">Email Me</a>
-        
-        <div style="margin-top: 3rem;">
-            <p><strong>Connect on Social</strong></p>
-            <!-- Update these links with your actual profiles -->
-            <div style="margin-top: 1rem; font-size: 2rem;">
-                <a href="https://www.linkedin.com/" target="_blank" style="color: #0077b5; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
-                <a href="https://scholar.google.com/citations?user=UtYKUgUwbhqV" target="_blank" style="color: #4285F4; margin: 0 10px;"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Public health economics (vaccine hesitancy, mental health, tuberculosis, paediatric oncology)</li>
+                <li>Program evaluation and impact assessment</li>
+                <li>Development economics (education, labour markets, social protection)</li>
+                <li>Longitudinal survey data analysis</li>
+                <li>AI applications in research and data analysis</li>
+            </ul>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Dr Katherine Eyal. Built with academic rigor.</p>
+        <section>
+            <h2>Awards and Recognition</h2>
+            <ul>
+                <li>2017 ERSA Prize for Best Economics PhD (joint), UCT Faculty of Commerce</li>
+                <li>2014 South African Journal of Economics Middleton Award for best first article by a young economist</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #ccc;">
+        <p>University of Cape Town | School of Economics</p>
     </footer>
-
 </body>
 </html>
