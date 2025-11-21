@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Katherine Eyal | Economist & Data Scientist</title>
+    <meta name="description" content="Academic researcher and data consultant specializing in micro-econometrics, public health, and AI-driven research synthesis.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #003b6f; /* UCT-ish Blue */
+            --secondary: #f4f4f9;
+            --text: #333;
+            --light-text: #666;
+            --accent: #d9534f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            background-color: var(--secondary);
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text h2 {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero-text p {
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #002a50;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 10px;
+        }
+
+        .hero-image {
+            flex: 0 0 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 5%;
+        }
+
+        h3.section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: #e0e7ff;
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Selected Work */
+        .work-item {
+            background: white;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .work-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .work-meta {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-top: 2rem;
+            }
+
+            .nav-links {
+                display: none; /* Simple hide for mobile for this snippet */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Dr Katherine Eyal</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#research">Research</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Data Science & Economic Research Consultant</h1>
+            <h2>Associate Professor (UCT) | SALDRU Researcher</h2>
+            <p>
+                Bridging the gap between academic rigor and actionable insights. 
+                I help organizations design surveys, analyze complex datasets, and implement AI-driven research workflows.
+            </p>
+            <a href="#contact" class="btn">Work With Me</a>
+            <!-- Ideally link this to a PDF stored in your repo -->
+            <a href="#" class="btn btn-outline">Download CV</a>
+        </div>
+        <div class="hero-image">
+            <!-- REPLACE THIS SRC WITH YOUR ACTUAL IMAGE FILE NAME -->
+            <img src="https://via.placeholder.com/300x300?text=KE" alt="Katherine Eyal">
+        </div>
+    </header>
+
+    <!-- Services / Expertise -->
+    <section id="expertise">
+        <h3 class="section-title">Technical Expertise</h3>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Micro-Econometrics</h4>
+                <p>Causal inference, quasi-experimental techniques, and program evaluation (RCTs).</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <i class="fas fa-clipboard-list"></i>
+                <h4>Survey Design</h4>
+                <p>Large-scale instrument development (e.g., CVACS, HAALSI) and longitudinal study management.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h4>AI in Research</h4>
+                <p>Leveraging LLMs (Claude, ChatGPT) for research synthesis, data cleaning, and workflow automation.</p>
+            </div>
+             <!-- Service 4 -->
+             <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h4>Statistical Programming</h4>
+                <p>Advanced Stata, Python, R integration, and reproducible research methods.</p>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <span class="skill-tag">Stata</span>
+            <span class="skill-tag">Python & R</span>
+            <span class="skill-tag">Survey Design</span>
+            <span class="skill-tag">Public Health</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Development Economics</span>
+            <span class="skill-tag">AI Tools</span>
+        </div>
+    </section>
+
+    <!-- Selected Work / Research -->
+    <section id="research" style="background-color: #f9f9f9;">
+        <h3 class="section-title">Selected Projects & Impact</h3>
+        
+        <div class="work-item">
+            <h4>HAALSI: Health and Aging in Africa</h4>
+            <div class="work-meta">Scientific Advisor (2023-2028) | Indepth Community</div>
+            <p>Contributing to the design and analysis of a nationally representative longitudinal study. Focusing on cognitive health, socio-economic status, and mental well-being in adults aged 40+.</p>
+        </div>
+
+        <div class="work-item">
+            <h4>COVID-19 Vaccine Survey (CVACS)</h4>
+            <div class="work-meta">Co-Principal Investigator | Gates Foundation Funded</div>
+            <p>Led a large-scale ($500k budget) survey project providing rapid-response data to policymakers. Managed external consultants and junior researchers to evaluate behavioral economics-based messaging.</p>
+        </div>
+
+        <div class="work-item">
+            <h4>Mental Health & Economic Intersections</h4>
+            <div class="work-meta">Published Research & Policy Work</div>
+            <p>Extensive publication record on the economics of mental health, TB, and cash transfers. Successfully advocated for student mental health policies at UCT.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="text-align: center;">
+        <h3 class="section-title">Get In Touch</h3>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+            Available for research consultation, data analysis projects, and grant-writing support.
+        </p>
+        <a href="mailto:katherine.eyal@uct.ac.za" class="btn">Email Me</a>
+        
+        <div style="margin-top: 3rem;">
+            <p><strong>Connect on Social</strong></p>
+            <!-- Update these links with your actual profiles -->
+            <div style="margin-top: 1rem; font-size: 2rem;">
+                <a href="https://www.linkedin.com/" target="_blank" style="color: #0077b5; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=UtYKUgUwbhqV" target="_blank" style="color: #4285F4; margin: 0 10px;"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dr Katherine Eyal. Built with academic rigor.</p>
+    </footer>
+
+</body>
+</html>
